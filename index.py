@@ -2,7 +2,7 @@ import streamlit as st
 from urllib.parse import quote, urlencode
 
 # sidebar ferramentas
-st.set_page_config(page_title="Gerador de Links WhatsApp", layout="centered")
+st.set_page_config(page_title="Painel completo", layout="centered")
 st.sidebar.header(("Ferramentas :wrench: :nut_and_bolt:"))
 hub_firenze = st.sidebar.selectbox('',['Link WhatsApp', 'Gerador de UTM',], 0)
 
@@ -13,7 +13,7 @@ portifolio = st.sidebar.selectbox('',['Dashboard Loove', 'Dashboard',], 1)
 st.sidebar.header(("Sobre o autor :copyright:"))
 st.sidebar.markdown((
     """
-Apaixonado por Marketing e Dados, desenvolvi esse hub de ferramentas com objetivo de ajudar pessoaas que tem a mesma paixão! Me acompanhe nas redes sociais:
+Apaixonado por Marketing e Dados, desenvolvi esse hub de ferramentas com objetivo de ajudar pessoas que tem a mesma paixão! Me acompanhe nas redes sociais:
    :arrow_down: 
 - [Instagram](https://www.instagram.com/owemersonsilva_/) By Wemerson Silva
 - [Linkedin](https://www.linkedin.com/in/wemerson-silva-5098071a9/) By Wemerson Silva
@@ -91,3 +91,8 @@ if hub_firenze == 'Gerador de UTM':
             # Exibir o resultado
             st.success("URL com UTM gerada com sucesso!")
             st.code(utm_url, language="text")
+
+if portifolio == 'Dashboard Loove':
+
+    # Título do app
+        st.title("Zap Links - Gerador de Links do WhatsApp :calling:")
